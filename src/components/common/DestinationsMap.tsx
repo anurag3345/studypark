@@ -1,8 +1,8 @@
-import WorldMap, { type CountryContext } from "react-svg-worldmap";
+import WorldMap, { type CountryContext, type ISOCode } from "react-svg-worldmap";
 import { destinations } from "@/data/destinations";
 
 const mapData = destinations.map((destination) => ({
-  country: destination.isoCode,
+  country: destination.isoCode as ISOCode,
   value: 1,
 }));
 
