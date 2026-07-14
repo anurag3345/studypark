@@ -1,0 +1,13 @@
+{
+  "name": "Study Park Education Network",
+  "short_name": "Study Park",
+  "description": "Your Trusted Pathway to Global Education",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2688C7",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png", "purpose": "any" }
+  ]
+}
