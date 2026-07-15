@@ -18,15 +18,15 @@ export function Intro() {
           className="space-y-4 text-base leading-relaxed text-ink-soft"
         >
           <p>
-            Founded in 2018, Study Park Education Network Pvt. Ltd. has helped thousands of
-            students across Nepal turn the ambition of studying abroad into an accepted offer
+            Founded in 2018, Study Park Birtamode has helped hundreds of
+            students across Jhapa turn the ambition of studying abroad into an accepted offer
             letter and a visa stamp. We offer personalized counseling, university selection,
             admission assistance, visa processing, and documentation support, backed by
             partnerships with reputed universities worldwide.
           </p>
           <p>
             We don't believe in one-size-fits-all applications. Every student who walks through
-            our doors in Bagbazar gets a plan built around their own academic record, budget,
+            our doors in Birtamode gets a plan built around their own academic record, budget,
             and goals — not a template pulled off a shelf.
           </p>
         </motion.div>

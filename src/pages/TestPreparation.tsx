@@ -14,7 +14,7 @@ export default function TestPreparation() {
     <>
       <Seo
         title="Test Preparation"
-        description="IELTS, PTE, and SAT preparation classes at Study Park Education Network — structured coaching, mock tests, and one-on-one feedback in Kathmandu."
+        description="IELTS, PTE, and SAT preparation classes at Study Park Education Network — structured coaching, mock tests, and one-on-one feedback in Birtamode."
         path="/test-preparation"
         schema={[buildBreadcrumbSchema([{ label: "Test Preparation" }])]}
       />
@@ -26,20 +26,31 @@ export default function TestPreparation() {
         breadcrumbItems={[{ label: "Test Preparation" }]}
       />
 
-      <section className="py-20 sm:py-28">
+      <section className="py-16 sm:py-24">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-3">
             {testPrepServices.map((service) => (
-              <div key={service.slug} className="flex flex-col rounded-2xl border border-surface-border bg-white p-7 shadow-card">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-50 text-navy-500">
-                  <service.icon aria-hidden="true" className="h-6 w-6" />
+              <div
+                key={service.slug}
+                className="flex flex-col rounded-2xl border border-surface-border bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover sm:p-7"
+              >
+                {/* Icon */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-navy-500 to-navy-700 text-white shadow-sm">
+                  <service.icon aria-hidden="true" className="h-5 w-5" />
                 </div>
-                <h2 className="mt-5 font-display text-xl font-semibold text-ink">{service.title}</h2>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{service.description}</p>
+                <h2 className="mt-5 font-display text-lg font-semibold text-ink sm:text-xl">
+                  {service.title}
+                </h2>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
+                  {service.description}
+                </p>
                 <ul className="mt-5 space-y-2 border-t border-surface-border pt-5">
                   {service.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start gap-2 text-sm text-ink">
-                      <CheckCircle2 aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-navy-500" />
+                    <li key={highlight} className="flex items-start gap-2.5 text-sm text-ink">
+                      <CheckCircle2
+                        aria-hidden="true"
+                        className="mt-0.5 h-4 w-4 shrink-0 text-navy-500"
+                      />
                       {highlight}
                     </li>
                   ))}
@@ -50,16 +61,20 @@ export default function TestPreparation() {
         </Container>
       </section>
 
-      <section className="bg-surface-muted py-20 sm:py-28">
-        <Container className="max-w-3xl text-center">
-          <h2 className="text-display-md font-semibold text-balance">Which test should you take?</h2>
-          <p className="mt-4 text-base leading-relaxed text-ink-soft">
-            IELTS and PTE are both accepted for most English-speaking destinations — PTE tends to
-            suit students more comfortable with computer-based exams, while IELTS remains the
-            standard for many UK and Australian universities. SAT is required mainly for
-            undergraduate applications to the USA. Not sure which applies to you? That's exactly
-            what your first counseling session will clarify.
-          </p>
+      <section className="bg-surface-muted py-16 sm:py-24">
+        <Container className="max-w-3xl">
+          <div className="rounded-2xl border border-surface-border bg-white p-8 shadow-card text-center sm:p-10">
+            <h2 className="text-xl font-semibold text-balance sm:text-2xl">
+              Which test should you take?
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft sm:text-base">
+              IELTS and PTE are both accepted for most English-speaking destinations — PTE tends to
+              suit students more comfortable with computer-based exams, while IELTS remains the
+              standard for many UK and Australian universities. SAT is required mainly for
+              undergraduate applications to the USA. Not sure which applies to you? That's exactly
+              what your first counseling session will clarify.
+            </p>
+          </div>
         </Container>
       </section>
 

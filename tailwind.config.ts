@@ -33,6 +33,7 @@ export default {
           300: "#F7B966",
           500: "#F5941F", // primary brand orange (matches logo "Study")
           600: "#D97908",
+          700: "#B86307",
         },
         surface: {
           DEFAULT: "#FFFFFF",

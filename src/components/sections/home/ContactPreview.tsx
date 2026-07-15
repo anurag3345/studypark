@@ -1,15 +1,8 @@
-import { MapPin, PhoneCall, Mail, Clock } from "lucide-react";
+import { MapPin, PhoneCall, Clock } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { siteConfig } from "@/lib/siteConfig";
-
-const contactPoints = [
-  { icon: MapPin, label: "Visit us", value: `${siteConfig.address.line1}, ${siteConfig.address.line2}` },
-  { icon: PhoneCall, label: "Call us", value: siteConfig.phone, href: siteConfig.phoneHref },
-  { icon: Mail, label: "Email us", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-  { icon: Clock, label: "Office hours", value: siteConfig.openingHours },
-];
 
 export function ContactPreview() {
   return (
@@ -19,27 +12,37 @@ export function ContactPreview() {
           <SectionHeader
             eyebrow="Get in touch"
             title="Have a question before you commit?"
-            description="Drop by our Bagbazar office, call us directly, or send a message — a real counselor responds, not a bot."
+            description="Drop by our offices, call us directly, or send a message — our counselors are ready to help."
           />
-          <div className="mt-8 grid gap-5 sm:grid-cols-2">
-            {contactPoints.map((point) => (
-              <div key={point.label} className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-navy-50 text-navy-500">
-                  <point.icon aria-hidden="true" className="h-5 w-5" />
+          
+          <div className="mt-8 space-y-6">
+            {/* Birtamode office preview */}
+            <div className="rounded-xl border border-surface-border bg-white p-4 shadow-sm">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-gold-600">
+                {siteConfig.branches.birtamode.name}
+              </h3>
+              <div className="mt-3 grid gap-4 sm:grid-cols-2">
+                <div className="flex items-start gap-2.5">
+                  <MapPin className="h-4 w-4 shrink-0 text-navy-400 mt-0.5" />
+                  <p className="text-xs text-ink-soft">
+                    {siteConfig.branches.birtamode.address.line1}, {siteConfig.branches.birtamode.address.line2}
+                  </p>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">{point.label}</p>
-                  {point.href ? (
-                    <a href={point.href} className="text-sm font-medium text-ink hover:text-navy-500">
-                      {point.value}
-                    </a>
-                  ) : (
-                    <p className="text-sm font-medium text-ink">{point.value}</p>
-                  )}
+                <div className="flex items-center gap-2.5">
+                  <PhoneCall className="h-4 w-4 shrink-0 text-navy-400" />
+                  <a href={siteConfig.branches.birtamode.phoneHref} className="text-xs font-medium text-ink hover:text-navy-500 transition-colors">
+                    {siteConfig.branches.birtamode.phone}
+                  </a>
                 </div>
               </div>
-            ))}
+            </div>
+            
+            <div className="flex items-center gap-2 text-xs text-ink-soft">
+              <Clock className="h-4 w-4" />
+              <span>{siteConfig.openingHours}</span>
+            </div>
           </div>
+
           <Button to="/contact" size="lg" className="mt-8">
             Go to contact page
           </Button>
@@ -47,8 +50,8 @@ export function ContactPreview() {
 
         <div className="overflow-hidden rounded-2xl border border-surface-border shadow-card">
           <iframe
-            title="Study Park Education Network office location map"
-            src="https://www.google.com/maps?q=Bagbazar,Kathmandu,Nepal&output=embed"
+            title="Study Park Birtamode office location map"
+            src={siteConfig.branches.birtamode.mapUrl}
             className="h-80 w-full sm:h-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

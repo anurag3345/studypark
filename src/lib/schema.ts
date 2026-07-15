@@ -20,7 +20,7 @@ export function buildOrganizationSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.line1,
-      addressLocality: "Kathmandu",
+      addressLocality: "Birtamode",
       addressCountry: "NP",
     },
     telephone: siteConfig.phone,
@@ -41,7 +41,7 @@ export function buildLocalBusinessSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.line1,
-      addressLocality: "Kathmandu",
+      addressLocality: "Birtamode",
       addressCountry: "NP",
     },
     openingHours: "Su-Fr 09:30-17:30",

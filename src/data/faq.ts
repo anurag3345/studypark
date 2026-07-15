@@ -19,7 +19,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Do you offer IELTS and PTE preparation on-site?",
     answer:
-      "Yes, we run structured IELTS, PTE, and SAT preparation batches at our Kathmandu office, with mock tests and one-on-one feedback included.",
+      "Yes, we run structured IELTS, PTE, and SAT preparation batches at our Birtamode office, with mock tests and one-on-one feedback included.",
   },
   {
     question: "What documents do I need to get started?",

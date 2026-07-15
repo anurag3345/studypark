@@ -49,8 +49,8 @@ export function WhyChooseUs() {
               transition={{ duration: 0.45, delay: index * 0.08 }}
             >
               <Card className="h-full bg-white">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-500 text-white">
-                  <reason.icon aria-hidden="true" className="h-6 w-6" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-navy-500 to-navy-700 text-white shadow-sm">
+                  <reason.icon aria-hidden="true" className="h-5 w-5" />
                 </div>
                 <CardTitle className="mt-5 text-lg">{reason.title}</CardTitle>
                 <CardDescription>{reason.description}</CardDescription>

@@ -25,22 +25,23 @@ export default function Destinations() {
         breadcrumbItems={[{ label: "Destinations" }]}
       />
 
-      <section className="bg-navy-800 pb-20 sm:pb-28">
+      {/* World map — hidden on small screens to save space */}
+      <section className="hidden bg-navy-800 pb-20 sm:block sm:pb-28">
         <Container>
           <DestinationsMap />
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28">
+      <section className="py-16 sm:py-24">
         <Container>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {destinations.map((destination, index) => (
               <motion.div
                 key={destination.slug}
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10%" }}
-                transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
+                viewport={{ once: true, margin: "-5%" }}
+                transition={{ duration: 0.45, delay: (index % 3) * 0.08 }}
               >
                 <DestinationCard destination={destination} />
               </motion.div>

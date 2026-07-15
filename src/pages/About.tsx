@@ -28,42 +28,44 @@ export default function About() {
         breadcrumbItems={[{ label: "About" }]}
       />
 
-      <section className="py-20 sm:py-28">
-        <Container className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-          <SectionHeader eyebrow="Our story" title="A Kathmandu-based consultancy with a global network" />
-          <div className="space-y-4 text-base leading-relaxed text-ink-soft">
-            <p>
-              Study Park Education Network Pvt. Ltd. is a Nepal-based education consultancy
-              helping students pursue higher education abroad. We offer personalized
-              counseling, university selection, admission assistance, visa processing, and
-              documentation support, while partnering with reputed universities worldwide.
-            </p>
-            <p>
-              Our office in Bagbazar / Kalikasthan has become a starting point for students
-              across Kathmandu and beyond who want a plan they can trust — not just a stack of
-              paperwork.
-            </p>
+      {/* Story */}
+      <section className="py-16 sm:py-24">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-20">
+            <SectionHeader eyebrow="Our story" title="A trusted consultancy with a global network" />
+            <div className="space-y-4 text-base leading-relaxed text-ink-soft">
+              <p>
+                Study Park Education Network is a premier education consultancy helping students pursue higher education abroad.
+                We offer personalized counseling, university selection, admission assistance, visa processing, and documentation support,
+                while partnering with reputed universities worldwide.
+              </p>
+              <p>
+                With our prominent Birtamode Branch in Athiti Sadan, Jhapa,
+                we have become the starting point for students across Nepal who want a plan they can trust — not just a stack of paperwork.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
 
-      <section className="bg-surface-muted py-20 sm:py-28">
+      {/* Mission & Vision */}
+      <section className="bg-surface-muted py-16 sm:py-20">
         <Container className="grid gap-6 sm:grid-cols-2">
           <Card className="bg-white">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-500 text-white">
-              <Target aria-hidden="true" className="h-6 w-6" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-navy-500 to-navy-700 text-white shadow-sm">
+              <Target aria-hidden="true" className="h-5 w-5" />
             </div>
-            <h2 className="mt-5 font-display text-xl font-semibold text-ink">Our Mission</h2>
+            <h2 className="mt-5 font-display text-lg font-semibold text-ink sm:text-xl">Our Mission</h2>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
               Empower students with expert educational guidance and connect them with
               internationally recognized universities.
             </p>
           </Card>
           <Card className="bg-white">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-500 text-white">
-              <Eye aria-hidden="true" className="h-6 w-6" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-navy-500 to-navy-700 text-white shadow-sm">
+              <Eye aria-hidden="true" className="h-5 w-5" />
             </div>
-            <h2 className="mt-5 font-display text-xl font-semibold text-ink">Our Vision</h2>
+            <h2 className="mt-5 font-display text-lg font-semibold text-ink sm:text-xl">Our Vision</h2>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">
               Become Nepal's most trusted education consultancy.
             </p>
@@ -71,9 +73,10 @@ export default function About() {
         </Container>
       </section>
 
-      <section className="bg-navy-800 py-16 sm:py-20">
+      {/* Stats */}
+      <section className="bg-navy-800 py-14 sm:py-20">
         <Container>
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
             {stats.map((stat) => (
               <StatCounter key={stat.label} {...stat} />
             ))}
@@ -81,7 +84,8 @@ export default function About() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28">
+      {/* Team */}
+      <section className="py-16 sm:py-24">
         <Container>
           <SectionHeader
             eyebrow="Our team"
@@ -89,20 +93,20 @@ export default function About() {
             align="center"
             className="mx-auto"
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-5">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10%" }}
+                viewport={{ once: true, margin: "-5%" }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="flex flex-col items-center rounded-2xl border border-surface-border bg-white p-6 text-center shadow-card"
+                className="flex flex-col items-center rounded-2xl border border-surface-border bg-white p-5 text-center shadow-card"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-navy-500 font-display text-lg font-semibold text-white">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-navy-500 to-navy-700 font-display text-base font-semibold text-white shadow">
                   {member.initials}
                 </div>
-                <p className="mt-4 text-sm font-semibold text-ink">{member.name}</p>
+                <p className="mt-3 text-sm font-semibold text-ink leading-tight">{member.name}</p>
                 <p className="mt-1 text-xs text-ink-soft">{member.role}</p>
               </motion.div>
             ))}
